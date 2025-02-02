@@ -8,4 +8,4 @@ WHERE author IN (
     GROUP BY author
     HAVING SUM(amount) > 10
 );
-SELECT * FROM supply
+SELECT * FROM supply  

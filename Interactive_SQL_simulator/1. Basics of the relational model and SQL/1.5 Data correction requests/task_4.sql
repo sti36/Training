@@ -7,4 +7,4 @@ FROM supply
 WHERE author NOT IN (
         SELECT author 
         FROM book
-    )
+    ) 
