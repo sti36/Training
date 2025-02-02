@@ -5,4 +5,8 @@ UPDATE book
 SET buy = IF(buy > amount, buy - (buy - amount), buy + 0),
     price = IF(buy = 0, price * 0.9, price + 0);
 
+<<<<<<< HEAD
 SELECT * FROM book 
+=======
+SELECT * FROM book
+>>>>>>> 7744352a3d982482660b9dfa2d809d7b4af5d963

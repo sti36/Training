@@ -4,4 +4,8 @@
 INSERT INTO book (title, author, price, amount) 
 SELECT title, author, price, amount
 FROM supply
+<<<<<<< HEAD
 WHERE author NOT IN ('Булгаков М.А.', 'Достоевский Ф.М.'); 
+=======
+WHERE author NOT IN ('Булгаков М.А.', 'Достоевский Ф.М.');
+>>>>>>> 7744352a3d982482660b9dfa2d809d7b4af5d963
