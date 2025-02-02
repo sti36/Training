@@ -9,8 +9,4 @@ SELECT author, title,
 FROM book
 WHERE amount < (SELECT AVG(amount) FROM book);
 
-<<<<<<< HEAD
-SELECT * FROM ordering; 
-=======
 SELECT * FROM ordering;
->>>>>>> 7744352a3d982482660b9dfa2d809d7b4af5d963
