@@ -1,1 +1,4 @@
 desktop.ini
+.vscode
+.pytest_cache
+/Test automation using Selenium and Python/3. Test frameworks/3.2 Web application testing and test frameworks/__pycache__
