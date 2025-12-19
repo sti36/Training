@@ -2,3 +2,4 @@ desktop.ini
 .vscode
 .pytest_cache
 config.json
+__pycache__/
