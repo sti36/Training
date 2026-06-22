@@ -5,7 +5,7 @@ from selenium.webdriver.common.by import By
 @pytest.fixture(scope="function")
 def driver():
     print("\nstart browser for test..")
-    driver = webdriver.Chrome()
+    driver = webdriver.Firefox()
     yield driver
     print("\nquit browser..")
     driver.quit()
