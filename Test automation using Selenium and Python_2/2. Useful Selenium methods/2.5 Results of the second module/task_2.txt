@@ -1,0 +1,14 @@
+Задание: работа с alert
+Отметьте синтаксически верный способ переключиться на alert-сообщение в браузере.
+
+Выберите один вариант из списка
+
+browser.switch_to.window
+
+browser.window_handles[1]
+
+browser.switch_to_alert
+
+browser.switch_to.alert()
+
+* browser.switch_to.alert
