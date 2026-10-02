@@ -8,10 +8,14 @@
 Загрузить файл. Файл должен иметь расширение .txt и может быть пустым
 Нажать кнопку "Submit"""
 
+#Изменение кода: Отключен интерфейс браузера, добавлено копирование ответа из алерта и его вывод в терминал
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.options import Options
 import os
-import time
 
 url = 'http://suninjuly.github.io/file_input.html'
 first_name = 'Sergey'
@@ -22,8 +26,11 @@ current_dir = os.path.abspath(os.path.dirname(__file__))
 file_name = 'task_3.txt'
 file_path = os.path.join(current_dir, file_name)
 
+options = Options()
+options.add_argument('--headless=new')
+
 try:
-    browser = webdriver.Chrome()
+    browser = webdriver.Chrome(options=options)
     browser.get(url)
 
     browser.find_element(By.XPATH, '//input[@name = "firstname"]').send_keys(first_name)
@@ -34,6 +41,11 @@ try:
 
     browser.find_element(By.XPATH, '//button[text() = "Submit"]').click()
 
+    wait = WebDriverWait(browser, 10)
+    alert = wait.until(EC.alert_is_present())
+    number = alert.text.split()[-1]  # извлекает последнее слово (число) из текста алерта
+    alert.accept()
+    print(f"Answer: {number}")
+
 finally:
-    time.sleep(3)
     browser.quit()
